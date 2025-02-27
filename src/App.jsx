@@ -9,6 +9,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import MyList from './04/MyList';
+
 function App() {
 
 
@@ -37,7 +39,8 @@ function App() {
                         overflow-y-auto '>
         {/* <Hello /> */}
         {/* <MyClock /> */}
-        <MyDiv1 />
+        {/* <MyDiv1 /> */}
+        <MyList />
       </main>
       
       <footer className='w-full h-20 bg-lime-900
