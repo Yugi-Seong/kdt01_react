@@ -10,27 +10,28 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import MyList from './04/MyList';
+import Lotto from './05/Lotto';
 
 function App() {
 
 
   return (
     <div className='w-full xl:w-8/10 h-screen mx-auto flex flex-col'>
-      
+
       <header className='w-full h-20 bg-amber-50
                         px-10
-                        flex justify-between items-center'> 
+                        flex justify-between items-center'>
 
         <div className='text-4xl font-bold text-lime-900 font-mono italic flex'>
           KDT01
           <div className='flex text-sm items-center mx-10'>
-            <img src={reactLogo} alt="react" className="w-8" /> 
+            <img src={reactLogo} alt="react" className="w-8" />
             + <img src={viteLogo} alt="vite" className="w-8" />
           </div>
         </div>
-        
+
         <div className='text-3xl font-bold text-black'>
-            <FaHome />
+          <FaHome />
         </div>
       </header>
 
@@ -40,19 +41,20 @@ function App() {
         {/* <Hello /> */}
         {/* <MyClock /> */}
         {/* <MyDiv1 /> */}
-        <MyList />
+        {/* <MyList /> */}
+        <Lotto />
       </main>
-      
+
       <footer className='w-full h-20 bg-lime-900
                          px-10
                          flex justify-between items-center'>
 
-      <h1 className='text-base font-mono font-bold   decoration-solid text-black'>
-        [k-Digital 부산대 25-1 회차] AI 데이터 분석 풀스택 웹 개발자 양성과정
-      </h1>
+        <h1 className='text-base font-mono font-bold   decoration-solid text-black'>
+          [k-Digital 부산대 25-1 회차] AI 데이터 분석 풀스택 웹 개발자 양성과정
+        </h1>
       </footer>
 
-    </div> 
+    </div>
   )
 }
 
