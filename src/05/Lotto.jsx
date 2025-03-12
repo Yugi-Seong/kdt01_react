@@ -35,6 +35,7 @@ export default function Lotto() {
 
     // TailBall 만들기 
     let tm = lottoNum.map(item => item === '+' ? <span className='w-16 h-16 text-4xl font-bold flex justify-center items-center'>{item}</span> : <TailBall n={item} key={'n' + item} />);
+    console.log("------------"+lottoNum);
     setLottoTags(tm);
 
 
