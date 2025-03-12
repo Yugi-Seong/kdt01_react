@@ -12,11 +12,14 @@ import './App.css'
 import MyList from './04/MyList';
 import Lotto from './05/Lotto';
 import FoodMain from './06/FoodMain';
+<<<<<<< HEAD
 import MyToggle from './07/MyToggle';
 import MyEffect from './08/MyEffect';
 import './02/MyClock.css';
 import BoxOffice from './09/BoxOffice';
 import Traffic from './10/Traffic';
+=======
+>>>>>>> 3abe4a7764b447d468e1dd2c10a4cf8702501637
 
 function App() {
 
@@ -31,8 +34,12 @@ function App() {
         <div className='text-4xl font-bold text-lime-900 font-mono italic flex'>
           REACT
           <div className='flex text-sm items-center mx-10'>
+<<<<<<< HEAD
             {/* <img src={reactLogo} alt="react" className="w-8" />
             + <img src={viteLogo} alt="vite" className="w-8" /> */}
+=======
+            
+>>>>>>> 3abe4a7764b447d468e1dd2c10a4cf8702501637
           </div>
         </div>
 
@@ -48,6 +55,7 @@ function App() {
         {/* <MyClock /> */}
         {/* <MyDiv1 /> */}
         {/* <MyList /> */}
+<<<<<<< HEAD
         {/* <Lotto />/ */}
         {/* <FoodMain /> */}
         {/* <MyToggle /> */}
@@ -55,9 +63,13 @@ function App() {
         <BoxOffice />
         {/* <Traffic /> */}
         
+=======
+        {/* <Lotto /> */}
+        <FoodMain />
+>>>>>>> 3abe4a7764b447d468e1dd2c10a4cf8702501637
       </main>
 
-      <footer className='w-full h-20 bg-lime-900
+      <footer className='w-full min-h-20 bg-lime-900
                          px-10
                          flex justify-between items-center'>
 
