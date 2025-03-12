@@ -54,11 +54,11 @@ export default function BoxOffice() {
 
         let tm = boxList.map(item => <tr key={item.movieCd}
                                           onClick={()=>clickFunction(item)}
-                                    className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:cursor-pointer">
-                                      <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:cursor-pointer hover:text-lg transition">
+                                      <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white ">
                                         {item.rank}
                                       </th>
-                                      <td className="px-6 py-4">
+                                      <td className="px-6 py-4 text-left">
                                         {item.movieNm}
                                       </td>
                                       <td className="px-6 py-4 text-right">
@@ -77,9 +77,9 @@ export default function BoxOffice() {
                                       <td className="px-6 py-4 flex ">  
 
                                         {item.rankInten > 0 ? 
-                                            <span className='text-red-600'><BiSolidUpArrow />{item.rankInten}</span> : 
+                                            <span className='text-red-600 flex items-center gap-1'><BiSolidUpArrow />{item.rankInten}</span> : 
                                             item.rankInten < 0 ?
-                                            <span className='text-blue-600'><BiSolidDownArrow />{item.rankInten}</span> :
+                                            <span className='text-blue-600 flex items-center gap-1'><BiSolidDownArrow />{item.rankInten}</span> :
                                             '-'  
                                         }
 
