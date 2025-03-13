@@ -53,8 +53,8 @@ function App() {
         {/* <FoodMain /> */}
         {/* <MyToggle /> */}
         {/* <MyEffect /> */}
-        <BoxOffice />
-        {/* <Traffic /> */}
+        {/* <BoxOffice />/ */}
+        <Traffic />
 
       </main>
 
