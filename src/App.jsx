@@ -17,6 +17,7 @@ import MyEffect from './08/MyEffect';
 import './02/MyClock.css';
 import BoxOffice from './09/BoxOffice';
 import Traffic from './10/Traffic';
+import MyRef from './11/MyRef';
 
 function App() {
 
@@ -54,8 +55,8 @@ function App() {
         {/* <MyToggle /> */}
         {/* <MyEffect /> */}
         {/* <BoxOffice />/ */}
-        <Traffic />
-
+        {/* <Traffic />/ */}
+        <MyRef />
       </main>
 
       <footer className='w-full min-h-20 bg-lime-900

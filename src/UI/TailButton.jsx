@@ -5,14 +5,16 @@ export default function TailButton({ caption, color, onClick }) {
     "blue": "bg-blue-700",
     "orange":"bg-orange-700",
     "lime": "bg-lime-900",
-    "cyan":"bg-cyan-500"
+    "cyan":"bg-cyan-500",
+    "indigo" : "bg-indigo-400"
   }
 
   const bgHover = {
     "blue": "hover:bg-blue-700",
     "orange": "hover:bg-orange-700",
     "lime": "hover:bg-lime-900",
-    "cyan":"hover:bg-cyan-500"
+    "cyan":"hover:bg-cyan-500",
+    "indigo" : "hovor:bg-indigo-400"
   }
   return (
 
