@@ -14,7 +14,7 @@ export default function BoxOffice() {
 
   }
 
-  //
+  // 화면 재랜더링 될떄 변경하기 위한 변수 
   const refDate = useRef();
 
   // 날짜 클릭시 해당 영화명 패치 변경 상태변수 
