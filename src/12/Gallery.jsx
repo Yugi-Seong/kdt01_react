@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import TailCard from "../UI/TailCard"
 import TailButton from "../UI/TailButton";
-import InputBox from "../UI/InputBox";
+import TailInput from "../UI/TailInput";
 
 export default function Gallery() {
 
     const [tags, setTags] = useState();
+
     
     const getFetchData = async() =>{
 
@@ -13,7 +14,11 @@ export default function Gallery() {
         let searchWordEncoding = encodeURI(searchWord) ;         
 
         const apiKey = import.meta.env.VITE_APP_DATA_KEY ;
-        let url = `https://apis.data.go.kr/B551011/PhotoGalleryService1/gallerySearchList1?serviceKey=${apiKey}&numOfRows=100&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A&keyword=${searchWordEncoding}&_type=json` ;
+
+        // 	정렬 구분 : A=촬영일, B=제목, C=수정일
+        const arrangeType = refSelect.current.value ;
+
+        let url = `https://apis.data.go.kr/B551011/PhotoGalleryService1/gallerySearchList1?serviceKey=${apiKey}&numOfRows=100&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=${arrangeType}&keyword=${searchWordEncoding}&_type=json` ;
         const resp = await fetch(url);
 
         if(!resp){
@@ -43,6 +48,7 @@ export default function Gallery() {
     const refButton1 = useRef();
     const refButton2 = useRef();
 
+    const refSelect = useRef();
     // 확인버튼 눌렸을때 
     const handleClick = (e) =>{
         e.preventDefault();
@@ -59,6 +65,7 @@ export default function Gallery() {
     // 취소버튼 눌렸을떄 초기화 
     const handleInit = () => {
         refInput.current.value = '';
+        setTags([]);
     }
 
   return (
@@ -66,8 +73,14 @@ export default function Gallery() {
     <div>
         <div>
             <div className="flex items-center justify-center">
-                <InputBox i={refInput}/>
+                <TailInput type="text" i={refInput} />
                 {/* <input type="text" className="border border-gray-400" ref={refInput}/> */}
+                {/* 정렬기준 A=촬영일, B=제목, C=수정일 */}
+                <select>
+                    <option value="A" ref={refSelect}>촬영일 기준정렬</option>
+                    <option value="B" ref={refSelect}>제목 기준정렬</option>
+                    <option value="C" ref={refSelect}>수정일 기준정렬</option>
+                </select>
                 <TailButton caption="검색" color="blue" onClick={handleClick} ref={refButton1} />
                 <TailButton caption="취소" color="blue" onClick={handleInit} ref={refButton2}/>
             </div>
@@ -75,9 +88,9 @@ export default function Gallery() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3">
-            {tags && tags.map((item, index)=>
+            {tags && tags.map((item,index)=>
                 <TailCard 
-                    key={item.galTitle + index} 
+                    key={item.galContentId+ index} 
                     title={item.galTitle}
                     subtitle={item.galPhotographyLocation} 
                     imgurl={item.galWebImageUrl.replace('http', 'https')} 

@@ -6,9 +6,9 @@ export default function TailCard({title, subtitle, imgurl, keywords}) {
   
     return (
 
-        <div className="p-3 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 ">
+        <div className="w-full h-120 p-3 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 ">
             
-            <img className="rounded-t-lg " src={imgurl} alt={title} />
+            <img className="w-full h-50 rounded-t-lg object-cover" src={imgurl} alt={title} />
             <h1 className="text-left text-xl p-1 mt-3 text-gray-600">
                 {title}
             </h1>

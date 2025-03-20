@@ -19,6 +19,7 @@ import BoxOffice from './09/BoxOffice';
 import Traffic from './10/Traffic';
 import MyRef from './11/MyRef';
 import Gallery from './12/Gallery';
+import Festival from './13/Festival';
 
 function App() {
 
@@ -58,7 +59,9 @@ function App() {
         {/* <BoxOffice /> */}
         {/* <Traffic />/ */}
         {/* <MyRef /> */}
-        <Gallery />
+        {/* <Gallery /> */}
+        <Festival />
+        
       </main>
 
       <footer className='w-full min-h-20 bg-lime-900
