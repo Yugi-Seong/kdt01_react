@@ -21,6 +21,8 @@ import MyRef from './11/MyRef';
 import Gallery from './12/Gallery';
 import Festival from './13/Festival';
 import RouteMain from './14/RouteMain';
+import Fcst from './15/Fcst';
+import FcstList from './15/FcstList';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link, useNavigate } from 'react-router-dom';
@@ -61,6 +63,7 @@ function App() {
           <Link to='/traffic' className=' py-1 px-2  rounded-sm font-semibold text-green-700  hover:bg-stone-50 hover:text-stone-300'>Traffic</Link>
           <Link to='/gallery' className=' py-1 px-2  rounded-sm font-semibold text-green-700  hover:bg-stone-50 hover:text-stone-300'>Gallely</Link>
           <Link to='/festival' className=' py-1 px-2  rounded-sm font-semibold text-green-700  hover:bg-stone-50 hover:text-stone-300'>Festival</Link>
+          <Link to='/fcst' className=' py-1 px-2  rounded-sm font-semibold text-green-700  hover:bg-stone-50 hover:text-stone-300'>일기예보</Link>
           
 
         </div>
@@ -73,6 +76,8 @@ function App() {
         <Route path='traffic' element={<Traffic />}/>
         <Route path='/gallery' element={<Gallery />}/>
         <Route path='/festival' element={<Festival />}/>
+        <Route path='/fcst' element={<Fcst />}/>
+        <Route path='/fcstlist' element={<FcstList />}/>
         
       </Routes>
 
